@@ -1,11 +1,11 @@
 @extends('layouts.app') 
  
-@section('title', 'Add Student') 
-@section('page-title', 'Add New Student') 
+@section('title', 'Add Teacher') 
+@section('page-title', 'Add New Teacher') 
  
 @section('content') 
  
-<form action="{{ route('students.store') }}" method="POST"> 
+<form action="{{ route('teachers.store') }}" method="POST"> 
     @csrf 
      
     <label>Name:</label> 
@@ -26,8 +26,8 @@
     <label>Address:</label> 
     <textarea name="address"></textarea><br><br> 
      
-    <button type="submit">Save Student</button> 
-    <a href="{{ route('students.index') }}">Cancel</a> 
+    <button type="submit">Save Teacher</button> 
+    <a href="{{ route('teachers.index') }}">Cancel</a> 
 </form> 
  
 @endsection 
