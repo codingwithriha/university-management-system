@@ -1,4 +1,3 @@
-blade 
 @extends('layouts.app') 
 @section('title', 'Student Details') 
 @section('page-title', 'Student Details') 
