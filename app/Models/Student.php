@@ -18,9 +18,11 @@ class Student extends Model
         return $this->hasOne(StudentProfile::class); 
     } 
  
-    // Many-to-Many: Student belongs to many courses (will use later) 
+    // Many-to-Many: Student belongs to many courses 
     public function courses(): BelongsToMany 
     { 
-        return $this->belongsToMany(Course::class, 'course_student'); 
+        return $this->belongsToMany(Course::class, 'course_student') 
+                    ->withPivot('enrollment_date', 'status', 'grade') 
+                    ->withTimestamps(); 
     } 
-}
+} 
